@@ -9,4 +9,6 @@ export interface Subscription {
   document: string;
   createdAt: Date;
   updatedAt: Date;
+  activatedAt: Date;
+  removedIn90Days: number;
 }

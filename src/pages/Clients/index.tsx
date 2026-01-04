@@ -298,6 +298,14 @@ const Clients: React.FC = () => {
           </p>
         );
       },
+      inative_subscription_90_days: () => {
+        return (
+          <p key={log.id}>
+            {date} - INATIVADO POR ROTINA DE 90 DIAS - {userName} -{' '}
+            {product?.name}
+          </p>
+        );
+      },
     };
 
     return typesLogs[action] ? typesLogs[action]() : '';
@@ -425,7 +433,8 @@ const Clients: React.FC = () => {
                               {subscription.productName}
                             </td>
                             <td className="column2">
-                              {formatDateToBrazilian(subscription.updatedAt)}
+                              `{formatDateToBrazilian(subscription.activatedAt)}{' '}
+                              (removido ${subscription.removedIn90Days} vezes)`
                             </td>
                             <td className="column1">
                               <FiTrash

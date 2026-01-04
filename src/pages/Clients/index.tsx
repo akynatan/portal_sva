@@ -413,6 +413,7 @@ const Clients: React.FC = () => {
                     <thead>
                       <tr className="table100-head">
                         <th>Associados</th>
+                        <th>Data de ativacao</th>
                         <th> </th>
                       </tr>
                     </thead>
@@ -422,6 +423,9 @@ const Clients: React.FC = () => {
                           <tr key={subscription.id}>
                             <td className="column2">
                               {subscription.productName}
+                            </td>
+                            <td className="column2">
+                              {formatDateToBrazilian(subscription.updatedAt)}
                             </td>
                             <td className="column1">
                               <FiTrash

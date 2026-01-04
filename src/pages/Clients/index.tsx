@@ -433,8 +433,8 @@ const Clients: React.FC = () => {
                               {subscription.productName}
                             </td>
                             <td className="column2">
-                              `{formatDateToBrazilian(subscription.activatedAt)}{' '}
-                              (removido ${subscription.removedIn90Days} vezes)`
+                              {formatDateToBrazilian(subscription.activatedAt)}{' '}
+                              (removido {subscription.removedIn90Days} vez)
                             </td>
                             <td className="column1">
                               <FiTrash

@@ -15,6 +15,9 @@ import Users from '../pages/Users';
 import EditUser from '../pages/EditUser';
 import { useAuth } from '../hooks/auth';
 import Clients from '../pages/Clients';
+import Pops from '../pages/Pops';
+import AddPop from '../pages/AddPop';
+import EditPop from '../pages/EditPop';
 
 const Routes: React.FC = () => {
   const { user: userCurrent } = useAuth();
@@ -35,6 +38,9 @@ const Routes: React.FC = () => {
           <Route path="/users" exact component={Users} isPrivate />
           <Route path="/users/add" component={AddUser} isPrivate />
           <Route path="/user/:id" component={EditUser} isPrivate />
+          <Route path="/pops" exact component={Pops} isPrivate />
+          <Route path="/pops/add" component={AddPop} isPrivate />
+          <Route path="/pop/:id" component={EditPop} isPrivate />
         </>
       )}
     </Switch>
